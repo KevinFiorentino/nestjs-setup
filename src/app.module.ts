@@ -10,11 +10,15 @@ import morgan from './configs/morgan.config';
 
 import { MongoClientModule } from '@database/mongo-client.module';  
 
+import { SharedModule } from '@shared/shared.module';
+
+
 @Module({
   imports: [
     /* Nest/Config Modules */
     ConfigModule.forRoot(),
-    MongoClientModule
+    /* MongoClientModule, */
+    SharedModule,
     
     /* API Modules */
   ],

@@ -1,13 +1,14 @@
-# NodeJS + Solana
+# NestJS Setup Project
 
-## Installation
+### MongoDB Docker
 
-```bash
-$ npm install
-```
+* `docker-compose -f mongo.yml up -d`
 
-## Running the app
+### Run Local
 
-```bash
-$ npm run start:dev
-```
+* `npm install`
+* `npm run start:dev`
+
+### Run Docker
+
+* `docker-compose up -d --build`

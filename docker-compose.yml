@@ -1,0 +1,19 @@
+version: '3'
+services:
+
+  nodejs-backend:
+    restart: always
+    build: .
+    image: nodejs-backend
+    env_file:
+      - .env
+    ports:
+      - 3000:3000
+
+  nginx-nodejs-backend:
+    restart: always
+    image: nginx:alpine
+    ports:
+      - 80:80
+    volumes:
+      - ./nginx/:/etc/nginx/conf.d/
